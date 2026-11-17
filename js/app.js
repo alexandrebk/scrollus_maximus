@@ -1,13 +1,11 @@
 // Point d'entrée : charge les cartes, branche le feed, les interactions et le service worker.
 
-import { revealQuizAnswer } from './cards.js';
 import { getCards } from './data-source.js';
 import { Feed } from './feed.js';
 import { demote, markSeen, newProgress, promote } from './srs.js';
 import * as storage from './storage.js';
 import * as ui from './ui.js';
 
-const DOUBLE_TAP_MS = 280;
 const IOS_HINT_AFTER = 8;
 
 const feedNode = document.getElementById('feed');
@@ -20,6 +18,7 @@ const updateProgress = (id, transform) => storage.setProgress(id, transform(prog
 const ctx = {
   getCard: (id) => cardsById.get(id),
   isFavorite: storage.isFavorite,
+  isKnown: (id) => progressOf(id).status === 'known',
   getStreak: storage.getStreak,
   viewsToday: storage.viewsToday,
 };
@@ -48,13 +47,9 @@ function filteredCards() {
 
 const reloadFeed = () => feed.load(filteredCards());
 
-function toggleReveal(section) {
-  if (section?.classList.contains('card--latin')) section.classList.toggle('is-hidden');
-}
-
-function markKnown(section) {
+function markKnown(button, section) {
   updateProgress(section.dataset.id, promote);
-  section.classList.remove('is-hidden');
+  button.setAttribute('aria-pressed', 'true');
   section.classList.remove('is-known-anim');
   void section.offsetWidth;
   section.classList.add('is-known-anim');
@@ -63,6 +58,7 @@ function markKnown(section) {
 function handleAction(button, section) {
   const card = cardsById.get(section.dataset.id);
 
+  if (button.dataset.action === 'known') markKnown(button, section);
   if (button.dataset.action === 'favorite') {
     const favorite = storage.toggleFavorite(card.id);
     button.setAttribute('aria-pressed', String(favorite));
@@ -75,44 +71,12 @@ function handleAction(button, section) {
   if (button.dataset.action === 'share') ui.shareCard(card);
 }
 
-function handleQuiz(button, section) {
-  const card = cardsById.get(section.dataset.id);
-  const correct = revealQuizAnswer(section, card, button.dataset.choice);
-  storage.recordQuiz(correct);
-  updateProgress(card.id, correct ? promote : demote);
-}
-
-// Tap simple = révéler, double tap = « je connais ». Le tap simple attend un court délai
-// pour ne pas se déclencher lors d'un double tap.
-let tapTimer = null;
-let lastTap = { section: null, time: 0 };
-
-function handleTap(section) {
-  const now = performance.now();
-  const isDouble = lastTap.section === section && now - lastTap.time < DOUBLE_TAP_MS;
-  clearTimeout(tapTimer);
-
-  if (isDouble) {
-    lastTap = { section: null, time: 0 };
-    markKnown(section);
-    return;
-  }
-
-  lastTap = { section, time: now };
-  tapTimer = setTimeout(() => toggleReveal(section), DOUBLE_TAP_MS);
-}
-
 feedNode.addEventListener('click', (event) => {
   const section = event.target.closest('.card');
   if (!section) return;
 
   const action = event.target.closest('[data-action]');
-  if (action) return handleAction(action, section);
-
-  const choice = event.target.closest('.quiz__choice');
-  if (choice) return handleQuiz(choice, section);
-
-  if (section.dataset.kind === 'card') handleTap(section);
+  if (action) handleAction(action, section);
 });
 
 document.addEventListener('keydown', (event) => {
@@ -125,10 +89,6 @@ document.addEventListener('keydown', (event) => {
   if (['ArrowUp', 'PageUp', 'k'].includes(event.key)) {
     event.preventDefault();
     feed.step(-1);
-  }
-  if (event.key === 'Enter' || event.key === ' ') {
-    event.preventDefault();
-    toggleReveal(feed.active);
   }
 });
 
@@ -149,7 +109,6 @@ function setupHeader() {
       seen: storage.totalViews(),
       unique: Object.values(storage.allProgress()).filter((progress) => progress.seen > 0).length,
       total: allCards.length,
-      quiz: storage.getQuizStats(),
       streak: storage.getStreak(),
     });
   });

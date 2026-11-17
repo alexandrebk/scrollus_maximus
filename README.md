@@ -26,8 +26,7 @@ Puis ouvrir http://localhost:8000.
 | Geste | Effet |
 | --- | --- |
 | Swipe vertical / flèches ↑ ↓ | Carte suivante ou précédente |
-| Tap sur une carte latine / Entrée | Révèle ou masque la traduction et l'anecdote |
-| Double tap | « Je connais » : la carte monte d'un niveau |
+| Bouton ✓ | « Je connais » : la carte monte d'un niveau |
 | Bouton ↻ | « À revoir » : la carte revient vite |
 | Bouton cœur | Ajoute aux favoris (écran Collection) |
 | Bouton partager | Web Share API (image générée au canvas si possible, sinon texte ou copie) |
@@ -39,7 +38,7 @@ Puis ouvrir http://localhost:8000.
 | `index.html` | Page unique, en-tête et feuilles modales |
 | `css/style.css` | Styles, thèmes de cartes, animations |
 | `js/app.js` | Point d'entrée, interactions, service worker |
-| `js/feed.js` | Composition du feed (SRS + quiz) et fenêtre glissante |
+| `js/feed.js` | Composition du feed (SRS) et fenêtre glissante |
 | `js/cards.js` | Rendu de chaque type de carte |
 | `js/srs.js` | Répétition espacée (boîtes de Leitner 1, 3, 7, 21, 60 jours) |
 | `js/storage.js` | Progression, favoris, série, réglages |
@@ -63,7 +62,6 @@ Puis ouvrir http://localhost:8000.
   "image": "images/lat-001.webp",
   "image_credit": "Wikimedia Commons, domaine public",
   "related": "lat-010",
-  "quiz": { "blank": "Si vis pacem, para ___", "answer": "bellum", "choices": ["bellum", "pacem", "vitam", "gloriam"] },
   "difficulty": 2,
   "published": true
 }
@@ -72,7 +70,7 @@ Puis ouvrir http://localhost:8000.
 | Champ | Obligatoire | Description |
 | --- | --- | --- |
 | `id` | oui | Unique, préfixe par type : `lat-`, `lit-`, `cul-`, `img-` |
-| `type` | oui | `latin`, `literary`, `culture`, `image` ou `quiz` |
+| `type` | oui | `latin`, `literary`, `culture` ou `image` |
 | `text` | oui | Texte principal (`\n` pour un retour à la ligne) |
 | `theme` | oui | `guerre`, `sagesse`, `amour`, `humour`, `philosophie`, `droit`, `vie quotidienne`, `honneur`, `histoire` |
 | `published` | oui | `false` masque la carte |
@@ -81,7 +79,6 @@ Puis ouvrir http://localhost:8000.
 | `anecdote` | non | 3 lignes maximum |
 | `image`, `image_credit` | non | Chemin relatif et crédit de l'image |
 | `related` | non | `id` d'une carte liée (affichée en « Voir aussi ») |
-| `quiz` | non | Génère une carte quiz dans le feed |
 | `difficulty` | non | 1 à 3 |
 
 ## Ajouter une carte

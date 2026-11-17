@@ -8,11 +8,6 @@
     "work": "Epitoma rei militaris",
     "theme": "guerre",
     "anecdote": "Maxime tirée d'un traité militaire romain (fin du IVe siècle). Le texte original dit « Qui desiderat pacem, praeparet bellum » ; la forme courante est une reformulation. Elle a donné le nom de la munition 9 mm Parabellum.",
-    "quiz": {
-      "blank": "Si vis pacem, para ___",
-      "answer": "bellum",
-      "choices": ["bellum", "pacem", "vitam", "gloriam"]
-    },
     "difficulty": 2,
     "published": true
   },
@@ -25,11 +20,6 @@
     "anecdote": "Devise liée à l'hermine de Bretagne. Selon la tradition, l'hermine préférerait se laisser prendre plutôt que de salir sa blanche fourrure dans la boue. L'attribution précise de la devise (duc Jean V, Anne de Bretagne…) reste incertaine : l'indiquer comme tradition.",
     "image": "images/lat-002.webp",
     "image_credit": "À renseigner (hermine / blason de Bretagne, domaine public)",
-    "quiz": {
-      "blank": "Potius mori quam ___",
-      "answer": "foedari",
-      "choices": ["foedari", "vinci", "fugere", "amari"]
-    },
     "difficulty": 3,
     "published": true
   },
@@ -42,11 +32,6 @@
     "work": "Odes, I, 11",
     "theme": "sagesse",
     "anecdote": "Le vers complet est « carpe diem, quam minimum credula postero » : cueille le jour, sans te fier le moins du monde au lendemain. Horace l'adresse à une certaine Leuconoé qui consulte les astrologues.",
-    "quiz": {
-      "blank": "Carpe ___",
-      "answer": "diem",
-      "choices": ["diem", "noctem", "vitam", "horam"]
-    },
     "difficulty": 1,
     "published": true
   },
@@ -59,11 +44,6 @@
     "work": "Vie des douze Césars, César, 32",
     "theme": "histoire",
     "anecdote": "Paroles prêtées à César en janvier 49 av. J.-C., au moment de franchir le Rubicon avec son armée, ce qui déclenche la guerre civile. Suétone écrit « Iacta alea est » ; Plutarque rapporte qu'il les prononça en grec, en citant le poète Ménandre.",
-    "quiz": {
-      "blank": "Alea ___ est",
-      "answer": "jacta",
-      "choices": ["jacta", "victa", "facta", "data"]
-    },
     "difficulty": 1,
     "published": true
   },
@@ -75,11 +55,6 @@
     "author": "Proverbe",
     "theme": "vie quotidienne",
     "anecdote": "L'idée que l'ivresse délie les langues est ancienne : Pline l'Ancien la mentionne déjà comme un dicton populaire dans son Histoire naturelle (livre XIV), et le poète grec Alcée l'exprimait avant lui.",
-    "quiz": {
-      "blank": "In vino ___",
-      "answer": "veritas",
-      "choices": ["veritas", "vanitas", "libertas", "felicitas"]
-    },
     "difficulty": 1,
     "published": true
   },
@@ -91,11 +66,6 @@
     "author": "Adage juridique",
     "theme": "droit",
     "anecdote": "La formule elle-même est tardive, mais elle s'inspire d'un passage du Digeste de Justinien où le juriste Ulpien note qu'une règle est « très dure, mais ainsi la loi est écrite » (« perquam durum est, sed ita lex scripta est »).",
-    "quiz": {
-      "blank": "Dura lex, sed ___",
-      "answer": "lex",
-      "choices": ["lex", "rex", "pax", "jus"]
-    },
     "difficulty": 1,
     "published": true
   },
@@ -118,11 +88,6 @@
     "author": "Adage (idée déjà chez Cicéron)",
     "theme": "sagesse",
     "anecdote": "Cicéron écrit dans les Philippiques « Cuiusvis hominis est errare » (il est propre à tout homme de se tromper). La suite souvent ajoutée, « perseverare diabolicum » (persévérer est diabolique), est un ajout chrétien plus tardif.",
-    "quiz": {
-      "blank": "Errare ___ est",
-      "answer": "humanum",
-      "choices": ["humanum", "divinum", "facile", "turpe"]
-    },
     "difficulty": 1,
     "published": true
   },
@@ -135,11 +100,6 @@
     "work": "Vie des douze Césars, César, 37",
     "theme": "guerre",
     "anecdote": "César résume ainsi sa victoire éclair à Zéla (47 av. J.-C.) contre Pharnace II, roi du Pont. Selon Suétone, la formule figurait sur un panneau porté lors de son triomphe à Rome.",
-    "quiz": {
-      "blank": "Veni, vidi, ___",
-      "answer": "vici",
-      "choices": ["vici", "vixi", "dixi", "feci"]
-    },
     "difficulty": 1,
     "published": true
   },
@@ -152,11 +112,6 @@
     "work": "Satires, X, 81",
     "theme": "histoire",
     "anecdote": "Juvénal raille le peuple romain qui, après avoir détenu le pouvoir, ne désire plus anxieusement que deux choses : les distributions de blé et les courses du cirque.",
-    "quiz": {
-      "blank": "Panem et ___",
-      "answer": "circenses",
-      "choices": ["circenses", "gladios", "vinum", "aurum"]
-    },
     "difficulty": 2,
     "published": true
   },
@@ -169,11 +124,6 @@
     "work": "Satires, X, 356",
     "theme": "vie quotidienne",
     "anecdote": "Chez Juvénal, ce n'est pas un slogan sportif : c'est ce qu'il faut demander aux dieux dans ses prières, plutôt que la richesse ou la gloire.",
-    "quiz": {
-      "blank": "Mens sana in corpore ___",
-      "answer": "sano",
-      "choices": ["sano", "magno", "forti", "pulchro"]
-    },
     "difficulty": 1,
     "published": true
   },
@@ -198,11 +148,6 @@
     "work": "Asinaria (La Comédie des ânes)",
     "theme": "philosophie",
     "anecdote": "Chez Plaute, la réplique est « Lupus est homo homini, non homo, quom qualis sit non novit » : l'homme est un loup pour l'homme tant qu'il ne le connaît pas. Hobbes rend la formule célèbre dans la dédicace du De Cive (1642).",
-    "quiz": {
-      "blank": "Homo homini ___",
-      "answer": "lupus",
-      "choices": ["lupus", "deus", "amicus", "canis"]
-    },
     "difficulty": 2,
     "published": true
   },
@@ -215,11 +160,6 @@
     "work": "Bucoliques, X, 69",
     "theme": "amour",
     "anecdote": "Le vers complet est « Omnia vincit Amor : et nos cedamus Amori » : l'Amour triomphe de tout, cédons nous aussi à l'Amour.",
-    "quiz": {
-      "blank": "Omnia vincit ___",
-      "answer": "amor",
-      "choices": ["amor", "labor", "virtus", "tempus"]
-    },
     "difficulty": 1,
     "published": true
   },
@@ -244,11 +184,6 @@
     "work": "Histoire romaine, V, 48",
     "theme": "guerre",
     "anecdote": "Vers 390 av. J.-C., les Gaulois de Brennus assiègent Rome. Lors de la pesée de la rançon en or, les Romains protestent contre des poids truqués : Brennus jette alors son épée dans la balance en lançant « Vae victis ».",
-    "quiz": {
-      "blank": "Vae ___",
-      "answer": "victis",
-      "choices": ["victis", "victoribus", "gallis", "romanis"]
-    },
     "difficulty": 2,
     "published": true
   },
@@ -283,11 +218,6 @@
     "author": "Tradition pontificale",
     "theme": "philosophie",
     "anecdote": "Lors du couronnement des papes, on brûlait de l'étoupe devant le nouvel élu en prononçant cette phrase, pour lui rappeler la vanité des honneurs. Le rite a été abandonné après 1963.",
-    "quiz": {
-      "blank": "Sic transit ___ mundi",
-      "answer": "gloria",
-      "choices": ["gloria", "vita", "fortuna", "pecunia"]
-    },
     "difficulty": 2,
     "published": true
   },
@@ -299,11 +229,6 @@
     "author": "Proverbe",
     "theme": "humour",
     "anecdote": "Se dit de deux personnes qui s'échangent des compliments exagérés et peu mérités, comme deux ânes qui se grattent mutuellement.",
-    "quiz": {
-      "blank": "Asinus asinum ___",
-      "answer": "fricat",
-      "choices": ["fricat", "amat", "videt", "mordet"]
-    },
     "difficulty": 2,
     "published": true
   },

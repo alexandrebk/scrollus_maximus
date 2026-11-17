@@ -9,7 +9,6 @@ const defaults = () => ({
   progress: {},
   favorites: [],
   days: {},
-  quiz: { correct: 0, total: 0 },
   bestStreak: 0,
   settings: { themes: [], types: [] },
   flags: {},
@@ -94,14 +93,6 @@ function computeStreak() {
 }
 
 export const getStreak = () => ({ current: computeStreak(), best: state.bestStreak });
-
-export function recordQuiz(correct) {
-  state.quiz.total += 1;
-  if (correct) state.quiz.correct += 1;
-  save();
-}
-
-export const getQuizStats = () => ({ ...state.quiz });
 
 export const getSettings = () => structuredClone(state.settings);
 

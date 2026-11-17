@@ -5,6 +5,7 @@ const svg = (path) =>
 
 export const icons = {
   heart: svg('<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>'),
+  known: svg('<path d="M5 12.5l4.5 4.5L19 7.5"/>'),
   review: svg('<path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4v4h4"/>'),
   share: svg('<path d="M12 15V3"/><path d="M7 8l5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/>'),
   filter: svg('<path d="M4 5h16"/><path d="M7 12h10"/><path d="M10 19h4"/>'),

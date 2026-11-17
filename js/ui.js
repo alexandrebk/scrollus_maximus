@@ -102,16 +102,14 @@ function collectionList(cards, emptyText) {
 export function renderCollection({ favorites, known, total }) {
   $('#collection-count').textContent = `${known.length} / ${total} cartes maîtrisées`;
   $('#collection-favorites').replaceChildren(collectionList(favorites, 'Touchez le cœur sur une carte pour la garder ici.'));
-  $('#collection-known').replaceChildren(collectionList(known, 'Double-touchez une carte que vous connaissez.'));
+  $('#collection-known').replaceChildren(collectionList(known, 'Appuyez sur ✓ sur une carte que vous connaissez.'));
   openDialog('collection');
 }
 
-export function renderStats({ seen, unique, total, quiz, streak }) {
-  const rate = quiz.total ? `${Math.round((quiz.correct / quiz.total) * 100)} %` : '–';
+export function renderStats({ seen, unique, total, streak }) {
   const rows = [
     ['Cartes vues', seen],
     ['Cartes découvertes', `${unique} / ${total}`],
-    ['Réussite aux quiz', `${rate} (${quiz.correct}/${quiz.total})`],
     ['Série en cours', `${streak.current} j`],
     ['Record', `${streak.best} j`],
   ];

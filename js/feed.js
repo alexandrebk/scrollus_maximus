@@ -1,4 +1,4 @@
-// Feed vertical : composition des lots de cartes (SRS + quiz) et rendu en fenêtre glissante.
+// Feed vertical : composition des lots de cartes (SRS) et rendu en fenêtre glissante.
 
 import { renderItem } from './cards.js';
 import { isDue, newProgress } from './srs.js';
@@ -7,16 +7,12 @@ import { getProgress } from './storage.js';
 const BATCH_SIZE = 8;
 const DUE_SHARE = 0.3;
 const KNOWN_CHANCE = 0.2;
-const QUIZ_GAP = { min: 5, max: 8 };
 const SUMMARY_EVERY = 20;
 const MAX_RENDERED = 48;
 const TRIM_COUNT = 16;
 const PREFETCH_DISTANCE = 3;
 
-const randomInt = (min, max) => min + Math.floor(Math.random() * (max - min + 1));
-const pickRandom = (list) => list[Math.floor(Math.random() * list.length)];
 const progressOf = (card) => getProgress(card.id) || newProgress();
-const hasQuiz = (card) => Boolean(card.quiz?.choices?.length);
 
 export class Feed {
   constructor(container, { ctx, onActive }) {
@@ -36,7 +32,6 @@ export class Feed {
   load(cards) {
     this.cards = cards;
     this.lastId = null;
-    this.untilQuiz = randomInt(QUIZ_GAP.min, QUIZ_GAP.max);
     this.untilSummary = SUMMARY_EVERY;
     this.activeObserver.disconnect();
     this.prefetchObserver.disconnect();
@@ -48,7 +43,7 @@ export class Feed {
   // Cartes dues (~30 %), puis nouvelles, puis de temps en temps une carte déjà connue.
   composeBatch() {
     const now = Date.now();
-    const pool = this.cards.filter((card) => card.type !== 'quiz');
+    const pool = this.cards;
     const due = pool.filter((card) => isDue(progressOf(card), now)).sort((a, b) => progressOf(a).dueAt - progressOf(b).dueAt);
     const fresh = pool.filter((card) => progressOf(card).status === 'new');
     const known = pool.filter((card) => progressOf(card).status === 'known' && !isDue(progressOf(card), now));
@@ -66,12 +61,6 @@ export class Feed {
     return [...picked].sort(() => Math.random() - 0.5);
   }
 
-  quizCandidate() {
-    const candidates = this.cards.filter((card) => (card.type === 'quiz' || hasQuiz(card)) && card.id !== this.lastId);
-    const seen = candidates.filter((card) => progressOf(card).status !== 'new');
-    return pickRandom(seen.length ? seen : candidates);
-  }
-
   nextItems() {
     if (!this.cards.length) return [{ kind: 'empty' }];
 
@@ -84,13 +73,6 @@ export class Feed {
     for (const card of this.composeBatch()) {
       if (card.id === this.lastId) continue;
       push({ kind: 'card', card });
-
-      this.untilQuiz -= 1;
-      const quizCard = this.untilQuiz <= 0 && this.quizCandidate();
-      if (quizCard) {
-        push({ kind: 'quiz', card: quizCard });
-        this.untilQuiz = randomInt(QUIZ_GAP.min, QUIZ_GAP.max);
-      }
 
       this.untilSummary -= 1;
       if (this.untilSummary <= 0) this.pushSummary(items);

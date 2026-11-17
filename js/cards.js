@@ -1,4 +1,4 @@
-// Rendu DOM de chaque élément du feed : carte de contenu, quiz, bilan de session, état vide.
+// Rendu DOM de chaque élément du feed : carte de contenu, bilan de session, état vide.
 
 import { icons } from './icons.js';
 
@@ -7,7 +7,6 @@ export const TYPE_LABELS = {
   literary: 'Littérature',
   culture: 'Culture',
   image: 'Image',
-  quiz: 'Quiz',
 };
 
 const el = (tag, className, text) => {
@@ -15,15 +14,6 @@ const el = (tag, className, text) => {
   if (className) node.className = className;
   if (text !== undefined) node.textContent = text;
   return node;
-};
-
-const shuffle = (list) => {
-  const copy = [...list];
-  for (let i = copy.length - 1; i > 0; i -= 1) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [copy[i], copy[j]] = [copy[j], copy[i]];
-  }
-  return copy;
 };
 
 function shell(item, modifier) {
@@ -66,6 +56,7 @@ function actionButton(action, label, icon, pressed) {
 function actions(card, ctx) {
   const bar = el('div', 'card__actions');
   bar.append(
+    actionButton('known', 'Je connais', icons.known, ctx.isKnown(card.id)),
     actionButton('favorite', 'Ajouter aux favoris', icons.heart, ctx.isFavorite(card.id)),
     actionButton('review', 'À revoir', icons.review),
     actionButton('share', 'Partager', icons.share),
@@ -92,62 +83,10 @@ function contentCard(item, ctx) {
 
   body.append(details);
 
-  // Seule la carte latine cache sa traduction : un tap la révèle.
-  if (card.type === 'latin') {
-    section.classList.add('is-hidden');
-    body.append(el('p', 'card__hint', 'Touchez pour révéler · double-touchez si vous connaissez'));
-  }
-
   if (card.image_credit) body.append(el('p', 'card__credit', card.image_credit));
 
   section.append(background(card), body, actions(card, ctx), el('div', 'card__known', 'Je connais'));
   return section;
-}
-
-function quizCard(item) {
-  const { card } = item;
-  const section = shell(item, 'quiz');
-  const body = el('div', 'card__body');
-  const choices = el('div', 'quiz__choices');
-
-  shuffle(card.quiz.choices).forEach((choice) => {
-    const button = el('button', 'quiz__choice', choice);
-    button.type = 'button';
-    button.dataset.choice = choice;
-    choices.append(button);
-  });
-
-  const feedback = el('div', 'quiz__feedback');
-  feedback.setAttribute('aria-live', 'polite');
-
-  body.append(
-    el('p', 'card__type', 'Quiz'),
-    el('p', 'quiz__question', 'Complétez la citation'),
-    el('blockquote', 'card__text card__text--latin', card.quiz.blank),
-    choices,
-    feedback,
-  );
-  section.append(el('div', 'card__bg'), body);
-  return section;
-}
-
-export function revealQuizAnswer(section, card, choice) {
-  const correct = choice === card.quiz.answer;
-  section.classList.add('is-answered', correct ? 'is-correct' : 'is-wrong');
-
-  section.querySelectorAll('.quiz__choice').forEach((button) => {
-    button.disabled = true;
-    if (button.dataset.choice === card.quiz.answer) button.classList.add('is-answer');
-    else if (button.dataset.choice === choice) button.classList.add('is-chosen');
-  });
-
-  const feedback = section.querySelector('.quiz__feedback');
-  feedback.append(
-    el('p', 'quiz__verdict', correct ? 'Bravo !' : `Raté : c'était « ${card.quiz.answer} »`),
-    el('p', 'card__translation', `${card.text} : ${card.translation || ''}`),
-  );
-  if (card.anecdote) feedback.append(el('p', 'card__anecdote', card.anecdote));
-  return correct;
 }
 
 function summaryCard(item, ctx) {
@@ -175,6 +114,6 @@ function emptyCard(item) {
   return section;
 }
 
-const renderers = { card: contentCard, quiz: quizCard, summary: summaryCard, empty: emptyCard };
+const renderers = { card: contentCard, summary: summaryCard, empty: emptyCard };
 
 export const renderItem = (item, ctx) => renderers[item.kind](item, ctx);
