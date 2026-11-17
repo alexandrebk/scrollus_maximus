@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Scrollus Maximus</title>
+  <meta name="description" content="Apprenez les expressions latines, les grandes citations et les anecdotes culturelles en scrollant.">
+  <meta name="theme-color" content="#120e0b">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Scrollus">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="preload" href="fonts/cormorant-garamond-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <h1 class="topbar__title">Scrollus <span>Maximus</span></h1>
+    <div class="topbar__actions">
+      <span id="streak" class="streak" data-icon="flame" role="img" aria-label="Série de 0 jour"><span id="streak-count" aria-hidden="true">0</span></span>
+      <button id="install-button" class="icon-button" type="button" data-icon="install" aria-label="Installer l'application" hidden></button>
+      <button id="stats-button" class="icon-button" type="button" data-icon="stats" aria-label="Statistiques"></button>
+      <button id="collection-button" class="icon-button" type="button" data-icon="collection" aria-label="Collection"></button>
+      <button id="filters-button" class="icon-button" type="button" data-icon="filter" aria-label="Filtres"></button>
+    </div>
+  </header>
+
+  <main id="feed" class="feed" aria-label="Fil de cartes" aria-live="off"></main>
+
+  <dialog id="filters" class="sheet" aria-labelledby="filters-title">
+    <form id="filters-form" class="sheet__inner" method="dialog">
+      <div class="sheet__header">
+        <h2 id="filters-title">Filtres</h2>
+        <button class="icon-button" value="close" data-icon="close" aria-label="Fermer"></button>
+      </div>
+      <fieldset>
+        <legend>Thèmes</legend>
+        <div id="filter-themes" class="chips"></div>
+      </fieldset>
+      <fieldset>
+        <legend>Types de cartes</legend>
+        <div id="filter-types" class="chips"></div>
+      </fieldset>
+      <p class="sheet__note">Sans sélection, toutes les cartes sont affichées.</p>
+      <div class="sheet__footer">
+        <button class="button button--ghost" type="reset">Tout afficher</button>
+        <button class="button" value="close">Valider</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="collection" class="sheet" aria-labelledby="collection-title">
+    <form class="sheet__inner" method="dialog">
+      <div class="sheet__header">
+        <h2 id="collection-title">Collection</h2>
+        <button class="icon-button" value="close" data-icon="close" aria-label="Fermer"></button>
+      </div>
+      <p id="collection-count" class="sheet__counter"></p>
+      <h3>Favoris</h3>
+      <div id="collection-favorites"></div>
+      <h3>Maîtrisées</h3>
+      <div id="collection-known"></div>
+    </form>
+  </dialog>
+
+  <dialog id="stats" class="sheet" aria-labelledby="stats-title">
+    <form class="sheet__inner" method="dialog">
+      <div class="sheet__header">
+        <h2 id="stats-title">Statistiques</h2>
+        <button class="icon-button" value="close" data-icon="close" aria-label="Fermer"></button>
+      </div>
+      <dl id="stats-list" class="stats"></dl>
+    </form>
+  </dialog>
+
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+
+  <noscript><p class="noscript">Scrollus Maximus a besoin de JavaScript pour fonctionner.</p></noscript>
+</body>
+</html>

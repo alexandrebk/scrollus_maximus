@@ -1,0 +1,532 @@
+[
+  {
+    "id": "lat-001",
+    "type": "latin",
+    "text": "Si vis pacem, para bellum",
+    "translation": "Si tu veux la paix, prépare la guerre",
+    "author": "Végèce (formulation tirée de son traité)",
+    "work": "Epitoma rei militaris",
+    "theme": "guerre",
+    "anecdote": "Maxime tirée d'un traité militaire romain (fin du IVe siècle). Le texte original dit « Qui desiderat pacem, praeparet bellum » ; la forme courante est une reformulation. Elle a donné le nom de la munition 9 mm Parabellum.",
+    "quiz": {
+      "blank": "Si vis pacem, para ___",
+      "answer": "bellum",
+      "choices": ["bellum", "pacem", "vitam", "gloriam"]
+    },
+    "difficulty": 2,
+    "published": true
+  },
+  {
+    "id": "lat-002",
+    "type": "latin",
+    "text": "Potius mori quam foedari",
+    "translation": "Plutôt mourir que se souiller",
+    "theme": "honneur",
+    "anecdote": "Devise liée à l'hermine de Bretagne. Selon la tradition, l'hermine préférerait se laisser prendre plutôt que de salir sa blanche fourrure dans la boue. L'attribution précise de la devise (duc Jean V, Anne de Bretagne…) reste incertaine : l'indiquer comme tradition.",
+    "image": "images/lat-002.webp",
+    "image_credit": "À renseigner (hermine / blason de Bretagne, domaine public)",
+    "quiz": {
+      "blank": "Potius mori quam ___",
+      "answer": "foedari",
+      "choices": ["foedari", "vinci", "fugere", "amari"]
+    },
+    "difficulty": 3,
+    "published": true
+  },
+  {
+    "id": "lat-003",
+    "type": "latin",
+    "text": "Carpe diem",
+    "translation": "Cueille le jour (profite du jour présent)",
+    "author": "Horace",
+    "work": "Odes, I, 11",
+    "theme": "sagesse",
+    "anecdote": "Le vers complet est « carpe diem, quam minimum credula postero » : cueille le jour, sans te fier le moins du monde au lendemain. Horace l'adresse à une certaine Leuconoé qui consulte les astrologues.",
+    "quiz": {
+      "blank": "Carpe ___",
+      "answer": "diem",
+      "choices": ["diem", "noctem", "vitam", "horam"]
+    },
+    "difficulty": 1,
+    "published": true
+  },
+  {
+    "id": "lat-004",
+    "type": "latin",
+    "text": "Alea jacta est",
+    "translation": "Le sort en est jeté",
+    "author": "Jules César (rapporté par Suétone)",
+    "work": "Vie des douze Césars, César, 32",
+    "theme": "histoire",
+    "anecdote": "Paroles prêtées à César en janvier 49 av. J.-C., au moment de franchir le Rubicon avec son armée, ce qui déclenche la guerre civile. Suétone écrit « Iacta alea est » ; Plutarque rapporte qu'il les prononça en grec, en citant le poète Ménandre.",
+    "quiz": {
+      "blank": "Alea ___ est",
+      "answer": "jacta",
+      "choices": ["jacta", "victa", "facta", "data"]
+    },
+    "difficulty": 1,
+    "published": true
+  },
+  {
+    "id": "lat-005",
+    "type": "latin",
+    "text": "In vino veritas",
+    "translation": "Dans le vin, la vérité",
+    "author": "Proverbe",
+    "theme": "vie quotidienne",
+    "anecdote": "L'idée que l'ivresse délie les langues est ancienne : Pline l'Ancien la mentionne déjà comme un dicton populaire dans son Histoire naturelle (livre XIV), et le poète grec Alcée l'exprimait avant lui.",
+    "quiz": {
+      "blank": "In vino ___",
+      "answer": "veritas",
+      "choices": ["veritas", "vanitas", "libertas", "felicitas"]
+    },
+    "difficulty": 1,
+    "published": true
+  },
+  {
+    "id": "lat-006",
+    "type": "latin",
+    "text": "Dura lex, sed lex",
+    "translation": "La loi est dure, mais c'est la loi",
+    "author": "Adage juridique",
+    "theme": "droit",
+    "anecdote": "La formule elle-même est tardive, mais elle s'inspire d'un passage du Digeste de Justinien où le juriste Ulpien note qu'une règle est « très dure, mais ainsi la loi est écrite » (« perquam durum est, sed ita lex scripta est »).",
+    "quiz": {
+      "blank": "Dura lex, sed ___",
+      "answer": "lex",
+      "choices": ["lex", "rex", "pax", "jus"]
+    },
+    "difficulty": 1,
+    "published": true
+  },
+  {
+    "id": "lat-007",
+    "type": "latin",
+    "text": "Memento mori",
+    "translation": "Souviens-toi que tu vas mourir",
+    "author": "Tradition",
+    "theme": "philosophie",
+    "anecdote": "Selon une tradition, un esclave rappelait au général romain lors de son triomphe qu'il n'était qu'un homme. Tertullien rapporte la formule « Respice post te ! Hominem te esse memento ! » (Regarde derrière toi ! Souviens-toi que tu es un homme !). La forme « memento mori » est surtout médiévale.",
+    "difficulty": 1,
+    "published": true
+  },
+  {
+    "id": "lat-008",
+    "type": "latin",
+    "text": "Errare humanum est",
+    "translation": "L'erreur est humaine",
+    "author": "Adage (idée déjà chez Cicéron)",
+    "theme": "sagesse",
+    "anecdote": "Cicéron écrit dans les Philippiques « Cuiusvis hominis est errare » (il est propre à tout homme de se tromper). La suite souvent ajoutée, « perseverare diabolicum » (persévérer est diabolique), est un ajout chrétien plus tardif.",
+    "quiz": {
+      "blank": "Errare ___ est",
+      "answer": "humanum",
+      "choices": ["humanum", "divinum", "facile", "turpe"]
+    },
+    "difficulty": 1,
+    "published": true
+  },
+  {
+    "id": "lat-009",
+    "type": "latin",
+    "text": "Veni, vidi, vici",
+    "translation": "Je suis venu, j'ai vu, j'ai vaincu",
+    "author": "Jules César (rapporté par Suétone et Plutarque)",
+    "work": "Vie des douze Césars, César, 37",
+    "theme": "guerre",
+    "anecdote": "César résume ainsi sa victoire éclair à Zéla (47 av. J.-C.) contre Pharnace II, roi du Pont. Selon Suétone, la formule figurait sur un panneau porté lors de son triomphe à Rome.",
+    "quiz": {
+      "blank": "Veni, vidi, ___",
+      "answer": "vici",
+      "choices": ["vici", "vixi", "dixi", "feci"]
+    },
+    "difficulty": 1,
+    "published": true
+  },
+  {
+    "id": "lat-010",
+    "type": "latin",
+    "text": "Panem et circenses",
+    "translation": "Du pain et des jeux (du cirque)",
+    "author": "Juvénal",
+    "work": "Satires, X, 81",
+    "theme": "histoire",
+    "anecdote": "Juvénal raille le peuple romain qui, après avoir détenu le pouvoir, ne désire plus anxieusement que deux choses : les distributions de blé et les courses du cirque.",
+    "quiz": {
+      "blank": "Panem et ___",
+      "answer": "circenses",
+      "choices": ["circenses", "gladios", "vinum", "aurum"]
+    },
+    "difficulty": 2,
+    "published": true
+  },
+  {
+    "id": "lat-011",
+    "type": "latin",
+    "text": "Mens sana in corpore sano",
+    "translation": "Un esprit sain dans un corps sain",
+    "author": "Juvénal",
+    "work": "Satires, X, 356",
+    "theme": "vie quotidienne",
+    "anecdote": "Chez Juvénal, ce n'est pas un slogan sportif : c'est ce qu'il faut demander aux dieux dans ses prières, plutôt que la richesse ou la gloire.",
+    "quiz": {
+      "blank": "Mens sana in corpore ___",
+      "answer": "sano",
+      "choices": ["sano", "magno", "forti", "pulchro"]
+    },
+    "difficulty": 1,
+    "published": true
+  },
+  {
+    "id": "lat-012",
+    "type": "latin",
+    "text": "Cogito, ergo sum",
+    "translation": "Je pense, donc je suis",
+    "author": "René Descartes",
+    "work": "Principia philosophiae (1644)",
+    "theme": "philosophie",
+    "anecdote": "Descartes l'écrit d'abord en français dans le Discours de la méthode (1637) ; la version latine apparaît dans les Principes de la philosophie. C'est la première certitude qui résiste au doute méthodique.",
+    "difficulty": 2,
+    "published": true
+  },
+  {
+    "id": "lat-013",
+    "type": "latin",
+    "text": "Homo homini lupus",
+    "translation": "L'homme est un loup pour l'homme",
+    "author": "Plaute, repris par Thomas Hobbes",
+    "work": "Asinaria (La Comédie des ânes)",
+    "theme": "philosophie",
+    "anecdote": "Chez Plaute, la réplique est « Lupus est homo homini, non homo, quom qualis sit non novit » : l'homme est un loup pour l'homme tant qu'il ne le connaît pas. Hobbes rend la formule célèbre dans la dédicace du De Cive (1642).",
+    "quiz": {
+      "blank": "Homo homini ___",
+      "answer": "lupus",
+      "choices": ["lupus", "deus", "amicus", "canis"]
+    },
+    "difficulty": 2,
+    "published": true
+  },
+  {
+    "id": "lat-014",
+    "type": "latin",
+    "text": "Omnia vincit amor",
+    "translation": "L'amour triomphe de tout",
+    "author": "Virgile",
+    "work": "Bucoliques, X, 69",
+    "theme": "amour",
+    "anecdote": "Le vers complet est « Omnia vincit Amor : et nos cedamus Amori » : l'Amour triomphe de tout, cédons nous aussi à l'Amour.",
+    "quiz": {
+      "blank": "Omnia vincit ___",
+      "answer": "amor",
+      "choices": ["amor", "labor", "virtus", "tempus"]
+    },
+    "difficulty": 1,
+    "published": true
+  },
+  {
+    "id": "lat-015",
+    "type": "latin",
+    "text": "Festina lente",
+    "translation": "Hâte-toi lentement",
+    "author": "Auguste (rapporté par Suétone)",
+    "work": "Vie des douze Césars, Auguste, 25",
+    "theme": "sagesse",
+    "anecdote": "Suétone rapporte qu'Auguste répétait souvent cette maxime, en grec : « Speude bradeôs ». L'imprimeur vénitien Alde Manuce en fit sa devise, illustrée par un dauphin enroulé autour d'une ancre.",
+    "difficulty": 2,
+    "published": true
+  },
+  {
+    "id": "lat-016",
+    "type": "latin",
+    "text": "Vae victis",
+    "translation": "Malheur aux vaincus",
+    "author": "Brennus (rapporté par Tite-Live)",
+    "work": "Histoire romaine, V, 48",
+    "theme": "guerre",
+    "anecdote": "Vers 390 av. J.-C., les Gaulois de Brennus assiègent Rome. Lors de la pesée de la rançon en or, les Romains protestent contre des poids truqués : Brennus jette alors son épée dans la balance en lançant « Vae victis ».",
+    "quiz": {
+      "blank": "Vae ___",
+      "answer": "victis",
+      "choices": ["victis", "victoribus", "gallis", "romanis"]
+    },
+    "difficulty": 2,
+    "published": true
+  },
+  {
+    "id": "lat-017",
+    "type": "latin",
+    "text": "Nemo auditur propriam turpitudinem allegans",
+    "translation": "Nul ne peut se prévaloir de sa propre turpitude",
+    "author": "Adage juridique",
+    "theme": "droit",
+    "anecdote": "Principe encore invoqué par les juges : on ne peut pas obtenir gain de cause en s'appuyant sur sa propre faute ou sur un acte malhonnête dont on est l'auteur.",
+    "difficulty": 3,
+    "published": true
+  },
+  {
+    "id": "lat-018",
+    "type": "latin",
+    "text": "Tempus fugit",
+    "translation": "Le temps fuit",
+    "author": "D'après Virgile",
+    "work": "Géorgiques, III, 284",
+    "theme": "sagesse",
+    "anecdote": "Virgile écrit « Sed fugit interea, fugit irreparabile tempus » : mais il fuit cependant, il fuit, le temps irréparable. La forme abrégée orne de nombreux cadrans solaires et horloges.",
+    "difficulty": 1,
+    "published": true
+  },
+  {
+    "id": "lat-019",
+    "type": "latin",
+    "text": "Sic transit gloria mundi",
+    "translation": "Ainsi passe la gloire du monde",
+    "author": "Tradition pontificale",
+    "theme": "philosophie",
+    "anecdote": "Lors du couronnement des papes, on brûlait de l'étoupe devant le nouvel élu en prononçant cette phrase, pour lui rappeler la vanité des honneurs. Le rite a été abandonné après 1963.",
+    "quiz": {
+      "blank": "Sic transit ___ mundi",
+      "answer": "gloria",
+      "choices": ["gloria", "vita", "fortuna", "pecunia"]
+    },
+    "difficulty": 2,
+    "published": true
+  },
+  {
+    "id": "lat-020",
+    "type": "latin",
+    "text": "Asinus asinum fricat",
+    "translation": "L'âne frotte l'âne",
+    "author": "Proverbe",
+    "theme": "humour",
+    "anecdote": "Se dit de deux personnes qui s'échangent des compliments exagérés et peu mérités, comme deux ânes qui se grattent mutuellement.",
+    "quiz": {
+      "blank": "Asinus asinum ___",
+      "answer": "fricat",
+      "choices": ["fricat", "amat", "videt", "mordet"]
+    },
+    "difficulty": 2,
+    "published": true
+  },
+  {
+    "id": "lit-001",
+    "type": "literary",
+    "text": "Parce que c'était lui, parce que c'était moi.",
+    "author": "Michel de Montaigne",
+    "work": "Essais, I, 28, « De l'amitié »",
+    "theme": "amour",
+    "anecdote": "Montaigne explique ainsi son amitié avec Étienne de La Boétie, mort en 1563. La seconde moitié de la phrase a été ajoutée à la main en marge de son exemplaire, en deux temps.",
+    "difficulty": 1,
+    "published": true
+  },
+  {
+    "id": "lit-002",
+    "type": "literary",
+    "text": "Patience et longueur de temps\nFont plus que force ni que rage.",
+    "author": "Jean de La Fontaine",
+    "work": "Fables, II, 11, « Le Lion et le Rat »",
+    "theme": "sagesse",
+    "anecdote": "Pris dans un filet, le lion ne peut s'en libérer malgré ses rugissements ; le rat ronge patiemment une maille et le délivre.",
+    "difficulty": 1,
+    "published": true
+  },
+  {
+    "id": "lit-003",
+    "type": "literary",
+    "text": "Il faut manger pour vivre, et non pas vivre pour manger.",
+    "author": "Molière",
+    "work": "L'Avare, acte III",
+    "theme": "humour",
+    "anecdote": "Valère prononce cette maxime pour flatter l'avare Harpagon, qui en est si ravi qu'il veut la faire graver en lettres d'or sur sa cheminée. La formule remonte à l'Antiquité, où elle est prêtée à Socrate.",
+    "difficulty": 1,
+    "published": true
+  },
+  {
+    "id": "lit-004",
+    "type": "literary",
+    "text": "Demain, dès l'aube, à l'heure où blanchit la campagne,\nJe partirai.",
+    "author": "Victor Hugo",
+    "work": "Les Contemplations (1856)",
+    "theme": "amour",
+    "anecdote": "Hugo y décrit la marche vers la tombe de sa fille Léopoldine, noyée dans la Seine à Villequier en 1843. Le poème est daté du 3 septembre 1847, veille du quatrième anniversaire de sa mort.",
+    "difficulty": 1,
+    "published": true
+  },
+  {
+    "id": "lit-005",
+    "type": "literary",
+    "text": "Là, tout n'est qu'ordre et beauté,\nLuxe, calme et volupté.",
+    "author": "Charles Baudelaire",
+    "work": "Les Fleurs du mal, « L'Invitation au voyage »",
+    "theme": "amour",
+    "anecdote": "Refrain du poème, repris trois fois. Matisse a intitulé l'un de ses tableaux « Luxe, calme et volupté » (1904).",
+    "difficulty": 1,
+    "published": true
+  },
+  {
+    "id": "lit-006",
+    "type": "literary",
+    "text": "Le cœur a ses raisons que la raison ne connaît point.",
+    "author": "Blaise Pascal",
+    "work": "Pensées",
+    "theme": "philosophie",
+    "anecdote": "Les Pensées sont des notes rassemblées et publiées après la mort de Pascal (1662), pour une apologie de la religion chrétienne qu'il n'a jamais achevée.",
+    "difficulty": 1,
+    "published": true
+  },
+  {
+    "id": "lit-007",
+    "type": "literary",
+    "text": "À vaincre sans péril, on triomphe sans gloire.",
+    "author": "Pierre Corneille",
+    "work": "Le Cid, acte II, scène 2",
+    "theme": "honneur",
+    "anecdote": "Le comte, père de Chimène, répond ainsi au jeune Rodrigue qui le provoque en duel : il juge le combat trop inégal pour lui faire honneur.",
+    "difficulty": 2,
+    "published": true
+  },
+  {
+    "id": "lit-008",
+    "type": "literary",
+    "text": "Il faut cultiver notre jardin.",
+    "author": "Voltaire",
+    "work": "Candide, chapitre 30",
+    "theme": "philosophie",
+    "anecdote": "Dernière phrase du conte (1759). Candide y oppose le travail concret aux grandes théories optimistes de son maître Pangloss.",
+    "difficulty": 1,
+    "published": true
+  },
+  {
+    "id": "cul-001",
+    "type": "culture",
+    "text": "SPQR",
+    "translation": "Senatus Populusque Romanus : le Sénat et le peuple romain",
+    "theme": "histoire",
+    "anecdote": "Ces quatre lettres désignaient l'État romain sur les enseignes, les monuments et les inscriptions. La ville de Rome les utilise toujours, jusque sur ses plaques d'égout.",
+    "difficulty": 1,
+    "published": true
+  },
+  {
+    "id": "cul-002",
+    "type": "culture",
+    "text": "Fluctuat nec mergitur",
+    "translation": "Il est battu par les flots, mais ne sombre pas",
+    "author": "Devise de la ville de Paris",
+    "theme": "histoire",
+    "anecdote": "Le navire des armoiries de Paris vient de la puissante corporation des marchands de l'eau. La devise est officialisée en 1853 sous le préfet Haussmann, et reprise comme symbole de résistance après les attentats de novembre 2015.",
+    "difficulty": 2,
+    "published": true
+  },
+  {
+    "id": "cul-003",
+    "type": "culture",
+    "text": "E pluribus unum",
+    "translation": "De plusieurs, un seul",
+    "author": "Devise du grand sceau des États-Unis",
+    "theme": "histoire",
+    "anecdote": "Inscrite sur le grand sceau adopté en 1782, elle évoque l'union des treize colonies en une nation. « In God We Trust » n'est devenue la devise officielle du pays qu'en 1956.",
+    "difficulty": 2,
+    "published": true
+  },
+  {
+    "id": "cul-004",
+    "type": "culture",
+    "text": "Franchir le Rubicon",
+    "translation": "Prendre une décision irréversible",
+    "theme": "guerre",
+    "anecdote": "Le Rubicon, petit fleuve côtier, marquait la limite entre la Gaule cisalpine et l'Italie. Un général n'avait pas le droit de le franchir en armes : en le traversant en janvier 49 av. J.-C., César déclare la guerre au Sénat.",
+    "difficulty": 1,
+    "published": true
+  },
+  {
+    "id": "cul-005",
+    "type": "culture",
+    "text": "Une victoire à la Pyrrhus",
+    "translation": "Une victoire obtenue à un prix si lourd qu'elle ressemble à une défaite",
+    "theme": "guerre",
+    "anecdote": "Pyrrhus Ier, roi d'Épire, bat les Romains à Héraclée (280 av. J.-C.) puis à Ausculum (279 av. J.-C.), mais perd tant d'hommes que, selon Plutarque, il aurait dit : « Encore une victoire comme celle-là, et nous sommes perdus. »",
+    "difficulty": 2,
+    "published": true
+  },
+  {
+    "id": "cul-006",
+    "type": "culture",
+    "text": "Les ides de mars",
+    "translation": "Le 15 mars, dans le calendrier romain",
+    "theme": "histoire",
+    "anecdote": "César est assassiné aux ides de mars 44 av. J.-C. Le fameux « Tu quoque, mi fili » est une légende : Suétone dit qu'il mourut sans un mot, tout en signalant que certains lui prêtaient en grec « Kai su, teknon ? » (Toi aussi, mon enfant ?).",
+    "difficulty": 2,
+    "published": true
+  },
+  {
+    "id": "cul-007",
+    "type": "culture",
+    "text": "Juillet et août",
+    "translation": "Deux mois nommés d'après des empereurs romains",
+    "theme": "vie quotidienne",
+    "anecdote": "Le mois Quintilis est rebaptisé Iulius en l'honneur de Jules César (44 av. J.-C.), et Sextilis devient Augustus en l'honneur d'Auguste (8 av. J.-C.). Leurs anciens noms rappellent que l'année romaine commençait en mars.",
+    "difficulty": 1,
+    "published": true
+  },
+  {
+    "id": "cul-008",
+    "type": "culture",
+    "text": "Le salaire et le sel",
+    "translation": "« Salaire » vient du latin salarium, dérivé de sal, le sel",
+    "theme": "vie quotidienne",
+    "anecdote": "Le lien étymologique avec le sel est certain. En revanche, l'idée que les soldats romains étaient payés en sel n'est pas attestée par les sources antiques : salarium désignait sans doute une indemnité, peut-être destinée à acheter du sel.",
+    "difficulty": 2,
+    "published": true
+  },
+  {
+    "id": "img-001",
+    "type": "image",
+    "text": "Le Colisée",
+    "translation": "Amphithéâtre flavien, Rome",
+    "theme": "histoire",
+    "anecdote": "Inauguré en 80 apr. J.-C. sous l'empereur Titus, il pouvait accueillir environ 50 000 spectateurs pour les combats de gladiateurs et les chasses.",
+    "image": "images/img-001.webp",
+    "image_credit": "Illustration provisoire (à remplacer par une photo du domaine public)",
+    "related": "lat-010",
+    "difficulty": 1,
+    "published": true
+  },
+  {
+    "id": "img-002",
+    "type": "image",
+    "text": "Le Forum romain",
+    "translation": "Cœur politique et religieux de la Rome antique",
+    "theme": "histoire",
+    "anecdote": "Temples, basiliques et tribune aux harangues s'y côtoyaient. C'est là, dit la tradition, que fut incinéré le corps de César en 44 av. J.-C.",
+    "image": "images/img-002.webp",
+    "image_credit": "Illustration provisoire (à remplacer par une photo du domaine public)",
+    "related": "lat-004",
+    "difficulty": 1,
+    "published": true
+  },
+  {
+    "id": "img-003",
+    "type": "image",
+    "text": "La Louve capitoline",
+    "translation": "Bronze, Musées du Capitole, Rome",
+    "theme": "histoire",
+    "anecdote": "Symbole de Rome, la louve allaite Romulus et Rémus. Les jumeaux ont été ajoutés à la Renaissance, et la datation de la louve elle-même (étrusque ou médiévale) reste débattue.",
+    "image": "images/img-003.webp",
+    "image_credit": "Illustration provisoire (à remplacer par une photo du domaine public)",
+    "related": "lat-013",
+    "difficulty": 2,
+    "published": true
+  },
+  {
+    "id": "img-004",
+    "type": "image",
+    "text": "Les hermines de Bretagne",
+    "translation": "Le semé d'hermines, emblème du duché de Bretagne",
+    "theme": "honneur",
+    "anecdote": "Ces mouchetures stylisées représentent la queue noire de l'hermine. On les retrouve sur les bandes blanches du drapeau breton, le Gwenn ha Du.",
+    "image": "images/img-004.webp",
+    "image_credit": "Illustration provisoire (à remplacer par un blason du domaine public)",
+    "related": "lat-002",
+    "difficulty": 1,
+    "published": true
+  }
+]

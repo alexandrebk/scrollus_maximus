@@ -1,0 +1,62 @@
+# Exemple de configuration Decap CMS pour la V2 (non actif en V1).
+# Pour l'activer : ajouter admin/index.html qui charge Decap CMS, puis configurer
+# un proxy OAuth GitHub (GitHub Pages ne peut pas gérer l'authentification seul).
+
+backend:
+  name: github
+  repo: OWNER/scrollus-maximus
+  branch: main
+  # URL du proxy OAuth (ex. Cloudflare Worker ou Netlify) qui échange le code GitHub contre un jeton.
+  base_url: https://oauth.example.com
+
+locale: fr
+media_folder: images
+public_folder: images
+
+# Decap gère mal un fichier JSON dont la racine est un tableau.
+# Solution proposée : une carte = un fichier dans data/cards/,
+# puis une étape GitHub Actions fusionne data/cards/*.json en data/cards.json avant le déploiement.
+collections:
+  - name: cards
+    label: Cartes
+    label_singular: Carte
+    folder: data/cards
+    extension: json
+    format: json
+    create: true
+    identifier_field: id
+    slug: "{{fields.id}}"
+    summary: "{{id}} · {{text}}"
+    fields:
+      - { name: id, label: Identifiant, widget: string, pattern: ['^[a-z]+-[0-9]{3}$', "Format : lat-001"] }
+      - name: type
+        label: Type
+        widget: select
+        options:
+          - { label: Latin, value: latin }
+          - { label: Littérature, value: literary }
+          - { label: Culture, value: culture }
+          - { label: Image, value: image }
+          - { label: Quiz, value: quiz }
+      - { name: text, label: Texte, widget: text }
+      - { name: translation, label: Traduction, widget: string, required: false }
+      - { name: author, label: Auteur, widget: string, required: false }
+      - { name: work, label: Œuvre, widget: string, required: false }
+      - name: theme
+        label: Thème
+        widget: select
+        options: [guerre, sagesse, amour, humour, philosophie, droit, vie quotidienne, honneur, histoire]
+      - { name: anecdote, label: Anecdote, widget: text, required: false }
+      - { name: image, label: Image, widget: image, required: false }
+      - { name: image_credit, label: Crédit image, widget: string, required: false }
+      - { name: related, label: Carte liée (id), widget: string, required: false }
+      - name: quiz
+        label: Quiz
+        widget: object
+        required: false
+        fields:
+          - { name: blank, label: Phrase à trous, widget: string, hint: "Utiliser ___ pour le mot manquant" }
+          - { name: answer, label: Bonne réponse, widget: string }
+          - { name: choices, label: Choix (bonne réponse incluse), widget: list }
+      - { name: difficulty, label: Difficulté, widget: number, value_type: int, min: 1, max: 3, default: 1 }
+      - { name: published, label: Publiée, widget: boolean, default: true }
