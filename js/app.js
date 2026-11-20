@@ -68,7 +68,6 @@ function handleAction(button, section) {
     updateProgress(card.id, demote);
     ui.toast('Cette carte reviendra bientôt', { duration: 1500 });
   }
-  if (button.dataset.action === 'share') ui.shareCard(card);
 }
 
 feedNode.addEventListener('click', (event) => {
@@ -104,14 +103,6 @@ function setupHeader() {
     });
   });
 
-  document.getElementById('stats-button').addEventListener('click', () => {
-    ui.renderStats({
-      seen: storage.totalViews(),
-      unique: Object.values(storage.allProgress()).filter((progress) => progress.seen > 0).length,
-      total: allCards.length,
-      streak: storage.getStreak(),
-    });
-  });
 }
 
 // Service worker : dès qu'une nouvelle version prend la main, la page se recharge seule.

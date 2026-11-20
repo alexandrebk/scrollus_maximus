@@ -92,10 +92,6 @@ button {
   white-space: nowrap;
 }
 
-.topbar__title span {
-  color: var(--gold);
-}
-
 .topbar__actions {
   position: fixed;
   top: calc(var(--topbar-height) + 8px);
@@ -181,6 +177,7 @@ button {
 .card[data-theme="vie quotidienne"] { --theme-a: #2f2219; }
 .card[data-theme="honneur"] { --theme-a: #262036; }
 .card[data-theme="histoire"] { --theme-a: #35200f; }
+.card[data-theme="seconde guerre mondiale"] { --theme-a: #23291a; }
 
 .card__bg {
   position: absolute;
@@ -193,10 +190,6 @@ button {
   height: 100%;
   object-fit: cover;
   opacity: 0.45;
-}
-
-.card--image .card__img {
-  opacity: 0.75;
 }
 
 .card__bg::after {
@@ -212,10 +205,6 @@ button {
   max-width: 640px;
   margin: 0 auto;
   padding: calc(var(--topbar-height) + 16px) calc(76px + env(safe-area-inset-right)) calc(32px + env(safe-area-inset-bottom)) max(24px, env(safe-area-inset-left));
-}
-
-.card--image .card__body {
-  align-self: flex-end;
 }
 
 .card__type {
@@ -519,26 +508,6 @@ button {
   margin: 2px 0 0;
   color: var(--muted);
   font-size: 0.9rem;
-}
-
-.stats {
-  margin: 16px 0 0;
-}
-
-.stats__row {
-  display: flex;
-  justify-content: space-between;
-  padding: 14px 0;
-  border-bottom: 1px solid rgb(239 230 210 / 0.08);
-}
-
-.stats dt {
-  color: var(--muted);
-}
-
-.stats dd {
-  margin: 0;
-  font-weight: 600;
 }
 
 /* Toasts */

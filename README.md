@@ -1,4 +1,4 @@
-# Scrollus Maximus
+# Scrollus
 
 PWA mobile-first pour apprendre des expressions latines, des citations littéraires et des anecdotes culturelles en scrollant verticalement, carte par carte, comme sur TikTok ou Instagram.
 
@@ -29,7 +29,6 @@ Puis ouvrir http://localhost:8000.
 | Bouton ✓ | « Je connais » : la carte monte d'un niveau |
 | Bouton ↻ | « À revoir » : la carte revient vite |
 | Bouton cœur | Ajoute aux favoris (écran Collection) |
-| Bouton partager | Web Share API (image générée au canvas si possible, sinon texte ou copie) |
 
 ## Structure
 
@@ -43,7 +42,7 @@ Puis ouvrir http://localhost:8000.
 | `js/srs.js` | Répétition espacée (boîtes de Leitner 1, 3, 7, 21, 60 jours) |
 | `js/storage.js` | Progression, favoris, série, réglages |
 | `js/data-source.js` | Accès aux cartes (`getCards()`) |
-| `js/ui.js` | Toasts, filtres, collection, stats, installation, partage |
+| `js/ui.js` | Toasts, filtres, collection, installation |
 | `sw.js` | Cache hors ligne |
 | `admin/config.yml` | Exemple Decap CMS pour la V2 (inactif) |
 
@@ -70,7 +69,7 @@ Puis ouvrir http://localhost:8000.
 | Champ | Obligatoire | Description |
 | --- | --- | --- |
 | `id` | oui | Unique, préfixe par type : `lat-`, `lit-`, `cul-`, `img-` |
-| `type` | oui | `latin`, `literary`, `culture` ou `image` |
+| `type` | oui | `latin`, `literary`, `culture` ou `date` |
 | `text` | oui | Texte principal (`\n` pour un retour à la ligne) |
 | `theme` | oui | `guerre`, `sagesse`, `amour`, `humour`, `philosophie`, `droit`, `vie quotidienne`, `honneur`, `histoire` |
 | `published` | oui | `false` masque la carte |
@@ -92,7 +91,7 @@ Puis ouvrir http://localhost:8000.
 Les fichiers de `images/` sont des illustrations provisoires générées. Pour les remplacer :
 
 1. Chercher une image du domaine public sur [Wikimedia Commons](https://commons.wikimedia.org) et vérifier sa licence.
-2. La convertir en WebP sous le même nom (`cwebp -q 78 source.jpg -o images/img-001.webp`).
+2. La convertir en WebP sous le même nom (`cwebp -q 78 source.jpg -o images/lat-002.webp`).
 3. Mettre à jour `image_credit` (auteur, source, licence) et incrémenter `VERSION` dans `sw.js`.
 
 ## Déploiement sur GitHub Pages
@@ -107,9 +106,9 @@ Tous les chemins sont relatifs : l'app fonctionne sous n'importe quel sous-dossi
 
 | Plateforme | Étapes |
 | --- | --- |
-| Android (Chrome) | Bouton d'installation dans l'en-tête, ou menu ⋮ → « Installer l'application » |
+| Android (Chrome) | Menu ⋮ → « Installer l'application » |
 | iPhone (Safari) | Bouton Partager → « Sur l'écran d'accueil » (une invitation s'affiche après quelques cartes) |
-| Desktop (Chrome, Edge) | Icône d'installation dans la barre d'adresse |
+| Desktop (Chrome, Edge) | Bouton d'installation dans l'en-tête, ou icône dans la barre d'adresse |
 
 ## Feuille de route V2 : back office
 

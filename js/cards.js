@@ -6,7 +6,7 @@ export const TYPE_LABELS = {
   latin: 'Latin',
   literary: 'Littérature',
   culture: 'Culture',
-  image: 'Image',
+  date: 'Date',
 };
 
 const el = (tag, className, text) => {
@@ -59,7 +59,6 @@ function actions(card, ctx) {
     actionButton('known', 'Je connais', icons.known, ctx.isKnown(card.id)),
     actionButton('favorite', 'Ajouter aux favoris', icons.heart, ctx.isFavorite(card.id)),
     actionButton('review', 'À revoir', icons.review),
-    actionButton('share', 'Partager', icons.share),
   );
   return bar;
 }

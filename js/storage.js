@@ -76,7 +76,6 @@ export function recordView() {
 
 export const viewsToday = () => state.days[dayKey()] || 0;
 
-export const totalViews = () => Object.values(state.days).reduce((sum, n) => sum + n, 0);
 
 // Série : jours consécutifs avec au moins 5 cartes vues.
 // Si aujourd'hui n'est pas encore validé, la série d'hier reste active.

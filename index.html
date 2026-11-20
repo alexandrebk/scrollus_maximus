@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Scrollus Maximus</title>
+  <title>Scrollus</title>
   <meta name="description" content="Apprenez les expressions latines, les grandes citations et les anecdotes culturelles en scrollant.">
   <meta name="theme-color" content="#120e0b">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -19,11 +19,10 @@
 </head>
 <body>
   <header class="topbar">
-    <h1 class="topbar__title">Scrollus <span>Maximus</span></h1>
+    <h1 class="topbar__title">Scrollus</h1>
     <span id="streak" class="streak" data-icon="flame" role="img" aria-label="Série de 0 jour"><span id="streak-count" aria-hidden="true">0</span></span>
     <div class="topbar__actions">
       <button id="install-button" class="icon-button" type="button" data-icon="install" aria-label="Installer l'application" hidden></button>
-      <button id="stats-button" class="icon-button" type="button" data-icon="stats" aria-label="Statistiques"></button>
       <button id="collection-button" class="icon-button" type="button" data-icon="collection" aria-label="Collection"></button>
       <button id="filters-button" class="icon-button" type="button" data-icon="filter" aria-label="Filtres"></button>
     </div>
@@ -67,18 +66,8 @@
     </form>
   </dialog>
 
-  <dialog id="stats" class="sheet" aria-labelledby="stats-title">
-    <form class="sheet__inner" method="dialog">
-      <div class="sheet__header">
-        <h2 id="stats-title">Statistiques</h2>
-        <button class="icon-button" value="close" data-icon="close" aria-label="Fermer"></button>
-      </div>
-      <dl id="stats-list" class="stats"></dl>
-    </form>
-  </dialog>
-
   <div id="toasts" class="toasts" aria-live="polite"></div>
 
-  <noscript><p class="noscript">Scrollus Maximus a besoin de JavaScript pour fonctionner.</p></noscript>
+  <noscript><p class="noscript">Scrollus a besoin de JavaScript pour fonctionner.</p></noscript>
 </body>
 </html>

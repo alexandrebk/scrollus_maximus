@@ -2,7 +2,7 @@
 // stale-while-revalidate pour data/cards.json.
 // Incrémenter VERSION à chaque déploiement qui modifie l'app shell.
 
-const VERSION = 'v4';
+const VERSION = 'v5';
 const CACHE = `scrollus-${VERSION}`;
 const DATA_PATH = 'data/cards.json';
 
@@ -28,10 +28,6 @@ const SHELL = [
   'icons/maskable-512.png',
   'icons/apple-touch-icon.png',
   'images/lat-002.webp',
-  'images/img-001.webp',
-  'images/img-002.webp',
-  'images/img-003.webp',
-  'images/img-004.webp',
   DATA_PATH,
 ];
 
