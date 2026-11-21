@@ -92,6 +92,14 @@ button {
   white-space: nowrap;
 }
 
+.topbar__version {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  opacity: 0.5;
+}
+
 .topbar__actions {
   position: fixed;
   top: calc(var(--topbar-height) + 8px);

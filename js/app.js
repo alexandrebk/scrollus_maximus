@@ -120,11 +120,18 @@ async function registerServiceWorker() {
   });
 
   const registration = await navigator.serviceWorker.register('sw.js');
+  showAppVersion();
 
   // Une PWA installée reste souvent ouverte : on vérifie les mises à jour à chaque retour au premier plan.
   document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'visible') registration.update().catch(() => {});
   });
+}
+
+async function showAppVersion() {
+  await navigator.serviceWorker.ready;
+  const cacheName = (await caches.keys()).find((key) => key.startsWith('scrollus-'));
+  if (cacheName) document.querySelector('#app-version').textContent = cacheName.replace('scrollus-', '');
 }
 
 async function start() {

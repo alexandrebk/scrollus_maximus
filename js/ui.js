@@ -111,12 +111,12 @@ export function setupInstall({ shouldHintIos, onIosHintShown }) {
   let deferred = null;
   const button = $('#install-button');
 
-  const isDesktop = window.matchMedia('(pointer: fine)').matches;
+  const isMobile = window.matchMedia('(pointer: coarse)').matches;
 
   window.addEventListener('beforeinstallprompt', (event) => {
     event.preventDefault();
     deferred = event;
-    button.hidden = !isDesktop;
+    button.hidden = !isMobile;
   });
 
   button.addEventListener('click', async () => {

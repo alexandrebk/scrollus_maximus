@@ -106,9 +106,9 @@ Tous les chemins sont relatifs : l'app fonctionne sous n'importe quel sous-dossi
 
 | Plateforme | Étapes |
 | --- | --- |
-| Android (Chrome) | Menu ⋮ → « Installer l'application » |
+| Android (Chrome) | Bouton d'installation dans l'en-tête, ou menu ⋮ → « Installer l'application » |
 | iPhone (Safari) | Bouton Partager → « Sur l'écran d'accueil » (une invitation s'affiche après quelques cartes) |
-| Desktop (Chrome, Edge) | Bouton d'installation dans l'en-tête, ou icône dans la barre d'adresse |
+| Desktop (Chrome, Edge) | Icône d'installation dans la barre d'adresse |
 
 ## Feuille de route V2 : back office
 
