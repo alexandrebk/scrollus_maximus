@@ -57,7 +57,7 @@ function actions(card, ctx) {
   const bar = el('div', 'card__actions');
   bar.append(
     actionButton('known', 'Je connais', icons.known, ctx.isKnown(card.id)),
-    actionButton('favorite', 'Ajouter aux favoris', icons.heart, ctx.isFavorite(card.id)),
+    actionButton('favorite', 'Favori', icons.heart, ctx.isFavorite(card.id)),
     actionButton('review', 'À revoir', icons.review),
   );
   return bar;

@@ -2,7 +2,7 @@
 // stale-while-revalidate pour data/cards.json.
 // Incrémenter VERSION à chaque déploiement qui modifie l'app shell.
 
-const VERSION = 'v6';
+const VERSION = 'v7';
 const CACHE = `scrollus-${VERSION}`;
 const DATA_PATH = 'data/cards.json';
 

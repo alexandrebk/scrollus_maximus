@@ -110,6 +110,7 @@ button {
 }
 
 .topbar__actions .icon-button {
+  position: relative;
   width: 48px;
   height: 48px;
   border: 1px solid rgb(239 230 210 / 0.15);
@@ -299,6 +300,7 @@ button {
 }
 
 .card__action {
+  position: relative;
   display: grid;
   place-items: center;
   width: 48px;
@@ -309,6 +311,29 @@ button {
   backdrop-filter: blur(6px);
   cursor: pointer;
   transition: transform 0.15s ease, color 0.15s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card__actions,
+  .topbar__actions {
+    gap: 30px;
+  }
+
+  .card__action::after,
+  .topbar__actions .icon-button::after {
+    content: attr(aria-label);
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--ivory);
+    font-family: var(--sans);
+    font-size: 0.68rem;
+    font-weight: 500;
+    white-space: nowrap;
+    text-shadow: 0 1px 3px rgb(0 0 0 / 0.8);
+    pointer-events: none;
+  }
 }
 
 .card__action:active {
