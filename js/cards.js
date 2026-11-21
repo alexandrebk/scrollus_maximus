@@ -69,7 +69,7 @@ function contentCard(item, ctx) {
   const body = el('div', 'card__body');
   const textClass = card.type === 'latin' ? 'card__text card__text--latin' : 'card__text';
 
-  body.append(el('p', 'card__type', TYPE_LABELS[card.type] || card.type), el('blockquote', textClass, card.text));
+  body.append(el('blockquote', textClass, card.text));
 
   const details = el('div', 'card__details');
   if (card.translation) details.append(el('p', 'card__translation', card.translation));
@@ -80,7 +80,7 @@ function contentCard(item, ctx) {
   const related = card.related && ctx.getCard(card.related);
   if (related) details.append(el('p', 'card__related', `Voir aussi : « ${related.text} »`));
 
-  body.append(details);
+  body.append(details, el('p', 'card__theme', TYPE_LABELS[card.type] || card.type));
 
   if (card.image_credit) body.append(el('p', 'card__credit', card.image_credit));
 

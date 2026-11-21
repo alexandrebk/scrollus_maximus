@@ -2,7 +2,7 @@
 // stale-while-revalidate pour data/cards.json.
 // Incrémenter VERSION à chaque déploiement qui modifie l'app shell.
 
-const VERSION = 'v7';
+const VERSION = 'v8';
 const CACHE = `scrollus-${VERSION}`;
 const DATA_PATH = 'data/cards.json';
 
@@ -34,7 +34,7 @@ const SHELL = [
 // cache: 'reload' contourne le cache HTTP (GitHub Pages) pour ne pas figer d'anciens fichiers.
 // skipWaiting active la nouvelle version tout de suite : la page se recharge seule.
 self.addEventListener('install', (event) => {
-  const requests = SHELL.map((path) => new Request(path, { cache: 'reload' }));
+  const requests = SHELL.map((path) => new Request(`${path}?v=${VERSION}`, { cache: 'reload' }));
   event.waitUntil(
     caches
       .open(CACHE)
@@ -81,7 +81,7 @@ async function staleWhileRevalidate(request, event) {
 
 // Navigation : l'app shell en cache d'abord, quelle que soit l'URL demandée.
 async function navigation(request) {
-  const cached = (await caches.match(request, { ignoreSearch: true })) || (await caches.match('index.html'));
+  const cached = (await caches.match(request, { ignoreSearch: true })) || (await caches.match('index.html', { ignoreSearch: true }));
   return cached || fetch(request);
 }
 
