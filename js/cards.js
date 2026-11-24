@@ -2,13 +2,6 @@
 
 import { icons } from './icons.js';
 
-export const TYPE_LABELS = {
-  latin: 'Latin',
-  literary: 'Littérature',
-  culture: 'Culture',
-  date: 'Date',
-};
-
 const el = (tag, className, text) => {
   const node = document.createElement(tag);
   if (className) node.className = className;
@@ -80,7 +73,7 @@ function contentCard(item, ctx) {
   const related = card.related && ctx.getCard(card.related);
   if (related) details.append(el('p', 'card__related', `Voir aussi : « ${related.text} »`));
 
-  body.append(details, el('p', 'card__theme', TYPE_LABELS[card.type] || card.type));
+  body.append(details, el('p', 'card__theme', card.theme));
 
   if (card.image_credit) body.append(el('p', 'card__credit', card.image_credit));
 

@@ -10,7 +10,7 @@ const defaults = () => ({
   favorites: [],
   days: {},
   bestStreak: 0,
-  settings: { themes: [], types: [] },
+  settings: { themes: [] },
   flags: {},
 });
 

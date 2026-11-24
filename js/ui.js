@@ -1,6 +1,5 @@
 // Interface hors feed : toasts, en-tête, filtres, collection, installation.
 
-import { TYPE_LABELS } from './cards.js';
 import { icons } from './icons.js';
 
 const $ = (selector) => document.querySelector(selector);
@@ -73,15 +72,13 @@ const capitalize = (text) => text.charAt(0).toUpperCase() + text.slice(1);
 
 export function renderFilters(cards, settings, onChange) {
   const themes = [...new Set(cards.map((card) => card.theme))].sort((a, b) => a.localeCompare(b, 'fr'));
-  const types = [...new Set(cards.map((card) => card.type))];
 
   $('#filter-themes').replaceChildren(...themes.map((theme) => chip('themes', theme, capitalize(theme), settings.themes.includes(theme))));
-  $('#filter-types').replaceChildren(...types.map((type) => chip('types', type, TYPE_LABELS[type] || type, settings.types.includes(type))));
 
   const form = $('#filters-form');
   form.onchange = () => {
     const values = (name) => [...form.querySelectorAll(`input[name="${name}"]:checked`)].map((input) => input.value);
-    onChange({ themes: values('themes'), types: values('types') });
+    onChange({ themes: values('themes') });
   };
   form.onreset = () => setTimeout(() => form.onchange());
 }

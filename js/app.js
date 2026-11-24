@@ -41,8 +41,8 @@ function handleActive(item, node) {
 }
 
 function filteredCards() {
-  const { themes, types } = storage.getSettings();
-  return allCards.filter((card) => (!themes.length || themes.includes(card.theme)) && (!types.length || types.includes(card.type)));
+  const { themes } = storage.getSettings();
+  return allCards.filter((card) => !themes.length || themes.includes(card.theme));
 }
 
 const reloadFeed = () => feed.load(filteredCards());

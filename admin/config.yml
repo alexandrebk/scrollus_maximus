@@ -34,9 +34,6 @@ collections:
         widget: select
         options:
           - { label: Latin, value: latin }
-          - { label: Littérature, value: literary }
-          - { label: Culture, value: culture }
-          - { label: Date, value: date }
       - { name: text, label: Texte, widget: text }
       - { name: translation, label: Traduction, widget: string, required: false }
       - { name: author, label: Auteur, widget: string, required: false }
@@ -44,7 +41,7 @@ collections:
       - name: theme
         label: Thème
         widget: select
-        options: [guerre, sagesse, amour, humour, philosophie, droit, vie quotidienne, honneur, histoire, seconde guerre mondiale]
+        options: [guerre, sagesse, amour, humour, philosophie, droit, vie quotidienne, honneur, histoire, religion, mort, nature, savoir, politique]
       - { name: anecdote, label: Anecdote, widget: text, required: false }
       - { name: image, label: Image, widget: image, required: false }
       - { name: image_credit, label: Crédit image, widget: string, required: false }

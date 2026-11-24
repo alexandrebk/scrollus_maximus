@@ -1,6 +1,6 @@
 # Scrollus
 
-PWA mobile-first pour apprendre des expressions latines, des citations littéraires et des anecdotes culturelles en scrollant verticalement, carte par carte, comme sur TikTok ou Instagram.
+PWA mobile-first pour apprendre le latin en scrollant verticalement des citations latines, carte par carte, comme sur TikTok ou Instagram.
 
 - Vanilla JavaScript (modules ES), HTML, CSS : aucun framework, aucun build.
 - Données dans `data/cards.json`, progression dans le `localStorage` du navigateur, aucun compte.
@@ -68,10 +68,10 @@ Puis ouvrir http://localhost:8000.
 
 | Champ | Obligatoire | Description |
 | --- | --- | --- |
-| `id` | oui | Unique, préfixe par type : `lat-`, `lit-`, `cul-`, `img-` |
-| `type` | oui | `latin`, `literary`, `culture` ou `date` |
+| `id` | oui | Unique, au format `lat-001` |
+| `type` | oui | Toujours `latin` |
 | `text` | oui | Texte principal (`\n` pour un retour à la ligne) |
-| `theme` | oui | `guerre`, `sagesse`, `amour`, `humour`, `philosophie`, `droit`, `vie quotidienne`, `honneur`, `histoire` |
+| `theme` | oui | `guerre`, `sagesse`, `amour`, `humour`, `philosophie`, `droit`, `vie quotidienne`, `honneur`, `histoire`, `religion`, `mort`, `nature`, `savoir`, `politique` |
 | `published` | oui | `false` masque la carte |
 | `translation` | non | Traduction ou sous-titre |
 | `author`, `work` | non | Attribution ; écrire « attribué à » ou « tradition » en cas de doute |
